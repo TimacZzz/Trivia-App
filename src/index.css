@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: none;
+}
+
+body{
+  background-image: url("./assets/bk.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 40%;
+  background-attachment: fixed;
+  color: #293264;
+}
+
+h1{
+  font-family: "Karla", sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+p{
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+div.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 850px;
+  height: 850px;
+  margin: 8% auto;
+  background-color: #f4f1fb;
+  border-radius: 10px;
+}
+
+button{
+  background-color: #4D5B9E;
+  border-radius: 15px;
+  border: 1px solid #4D5B9E;
+}
+
+button:hover{
+  cursor: pointer;
+  border: 1px solid black;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+#start-btn{
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #F5F7FB;
+  padding: 1rem 2rem;
+}
