@@ -42,12 +42,21 @@ button{
   background-color: #4D5B9E;
   border-radius: 15px;
   border: 1px solid #4D5B9E;
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
+  box-shadow: 0 6px 0 #3a4580;
 }
 
 button:hover{
   cursor: pointer;
   border: 1px solid black;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 0 #3a4580;
+}
+
+button:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #3a4580;
 }
 
 #start-btn{
@@ -56,4 +65,77 @@ button:hover{
   font-weight: 400;
   color: #F5F7FB;
   padding: 1rem 2rem;
+}
+
+#check-answer-btn{
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #F5F7FB;
+  padding: 1rem 2rem;
+  margin: 2rem auto;
+}
+
+input[type="radio"]{
+  display: none;
+}
+
+label{
+  display: block;
+  font-size: 0.9rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: #293264;
+  background-color: #F5F7FB;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  border: 2px solid #4D5B9E;
+  text-align: center;
+}
+
+label:hover{
+  cursor: pointer;
+  background-color: #D6DBF5;
+  box-shadow: 0 1px 0 #3a4580;
+}
+
+input[type="radio"]:checked + label {
+  background-color: #D6DBF5;
+}
+
+div.questions-container{
+  width: 850px;
+  height: 850px;
+  margin: 8% auto;
+  background-color: #f4f1fb;
+  border-radius: 10px;
+}
+
+form{
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+div.question-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  gap: 0.8rem;
+  border-bottom: 2px solid #DBDEF0;
+}
+
+div.answers-container{
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+h2.question{
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+  font-size: 1.3rem;
 }
