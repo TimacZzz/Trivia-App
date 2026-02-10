@@ -67,7 +67,7 @@ button:active {
   padding: 1rem 2rem;
 }
 
-#check-answer-btn{
+.quiz-btn{
   display: block;
   font-family: "Inter", sans-serif;
   font-size: 1rem;
@@ -77,8 +77,15 @@ button:active {
   margin: 2rem auto;
 }
 
+div.result-container .quiz-btn{
+  margin: 0;
+}
+
 input[type="radio"]{
-  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
 }
 
 label{
@@ -98,6 +105,11 @@ label:hover{
   cursor: pointer;
   background-color: #D6DBF5;
   box-shadow: 0 1px 0 #3a4580;
+}
+
+label.disable{
+  pointer-events: none;
+  cursor: not-allowed;
 }
 
 input[type="radio"]:checked + label {
@@ -130,6 +142,7 @@ div.question-container{
 
 div.answers-container{
   display: flex;
+  align-items: center;
   margin-bottom: 1rem;
   gap: 1rem;
 }
@@ -138,4 +151,18 @@ h2.question{
   font-family: "Karla", sans-serif;
   font-weight: bold;
   font-size: 1.3rem;
+}
+
+span{
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+div.result-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 2rem;
 }

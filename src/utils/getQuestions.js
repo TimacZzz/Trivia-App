@@ -8,7 +8,7 @@ export default async function getQuestions(){
     const rawQuestions = data.results;
 
     // Process the data
-    const processedQuestions = rawQuestions.map((question, index) => {
+    const processedQuestions = rawQuestions.map((question) => {
         // Generate a random index & insert the correct answer into the answer array
         const randomIndex = getRandomIndex(question.incorrect_answers.length);
         const rawAnswers = question.incorrect_answers;
@@ -20,10 +20,10 @@ export default async function getQuestions(){
 
         // Construct object
         return {
-            key: index,
             question: processedQuestion,
             answers: processedAnswers,
-            correct_answer_index: randomIndex
+            correct_answer_index: randomIndex,
+            selected_answer_index: -1
         }
     });
 
